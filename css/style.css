@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700&display=swap");
+
+html {
+  background-color: #222222;
+  position: relative;
+}
+.navbar,
+.nav-link,
+a {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    background-color: #222222;
+    color: white;
+  }
+  /* .navbar,
+  .navbar-toggler {
+    border-color: white;
+  } */
+}
+.jumbotron {
+  background-color: #222222;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  min-height: 500px;
+}
