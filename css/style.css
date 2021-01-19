@@ -22,12 +22,12 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
-section {
-  min-height: 600px;
-}
-
 .portfolio {
   padding-top: -100px;
+}
+
+section {
+  min-height: 600px;
 }
 
 footer {
