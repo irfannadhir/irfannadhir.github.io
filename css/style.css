@@ -23,11 +23,11 @@ a {
 }
 
 .portfolio {
-  padding-top: -100px;
+  margin-top: -80px;
 }
 
-section {
-  min-height: 600px;
+.contact{
+  margin-bottom: 20px;
 }
 
 footer {
