@@ -15,7 +15,17 @@ a {
     background-color: #110829;
     color: white;
   }
+
+  .jumbotron {
+    min-height: 850px;
+  }
+
+  .profil {
+    height: 15;
+    width: 25;
+  }
 }
+
 .jumbotron {
   background-color: #110829;
   color: #8892b0;
@@ -26,7 +36,7 @@ a {
   margin-top: -80px;
 }
 
-.contact{
+.contact {
   margin-bottom: 20px;
 }
 
