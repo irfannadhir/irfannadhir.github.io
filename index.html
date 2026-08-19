@@ -1,258 +1,842 @@
 <!doctype html>
-<html lang="en">
+<html lang="id" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio Irfan Nadhir — Web Programmer. PHP, MySQL, JavaScript, dan pengembangan web."
+    />
+    <meta name="author" content="Irfan Nadhir" />
+    <title>Irfan Nadhir — Web Programmer</title>
+    <link rel="icon" href="img/logo.png" />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" href="img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/all.css">
+  <body>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Skip ke konten utama</a>
 
-  <title>Irfan Nadhir</title>
-</head>
-
-<body>
-  <!-- navbar -->
-  <nav>
-    <div class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="http://instagram.com/irfannadhir_">
-          <img src="img/2.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-          NENP
+    <!-- ============ NAVBAR ============ -->
+    <header class="nav" id="nav">
+      <nav class="nav__inner" aria-label="Navigasi utama">
+        <a class="nav__logo" href="#hero" aria-label="Kembali ke atas">
+          <span class="nav__logo-arrow">➜</span>~/irfan
+          <span class="nav__logo-cursor" aria-hidden="true">_</span>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+
+        <button
+          class="nav__burger"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="navMenu"
+          aria-label="Buka menu navigasi"
+        >
+          <span></span><span></span><span></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto">
-            <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
 
-          </div>
-          <div class="dropdown">
-            <a class="btn ml-1 text-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Portfolio
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" target="_blank" href="https://admin.dipass.id/">Digital Passenger</a>
-              <a class="dropdown-item" target="_blank" href="https://adm.energiaabsen.com/">Absensi Karyawan</a>
-              <a class="dropdown-item" target="_blank" href="https://catering.nenp-lab.com/">Catering</a>
-              <a class="dropdown-item" target="_blank" href="http://sugarmema.com/">Landing Page</a>
-              <a class="dropdown-item" target="_blank" href="https://irfannadhir.blogspot.com">My Blog</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <!-- akhir navbar -->
-
-  <!-- jumbotron -->
-  <section>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-sm-5 mt-5">
-            <h3>Hi, I'm Irfan Nadhir</h3>
-            <h4>Currently being freelancer Web Programmer</h4>
-            <p>Bachelor of Information Systems in 2020. have experience as administrative staff, as well as PHP web
-              management and MySQL databases. As an IT graduate, I've created a GPS tracking system and a web-based
-              e-library system, etc. </p>
-            <a href="./file/CV IRFAN NADHIR.pdf" target="_blank" class="btn btn-light"><i class="fas fa-download"></i>
-              Download CV</a>
-            <a href="https://www.linkedin.com/in/irfan-nadhir-369813163/" target="_blank" class="btn text-white"><i
-                class="fab fa-linkedin"></i></a>
-            <a href="http://instagram.com/irfannadhir_" target="_blank" class="btn text-white"><i
-                class="fab fa-instagram"></i></a>
-          </div>
-          <div class="col-sm-5 ml-auto mt-3">
-            <img src="img/profil3.jpg" class="profil" height="400" width="280">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- akhir jumbotron -->
-
-  <!-- Portfolio-->
-  <section class="portfolio bg-light">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col">
-          <h2>Portfolio</h2>
-          <hr>
-        </div>
-      </div>
-      <div class="row text-center"">
-              <div class=" col">
-        <h4>Booking Photografer</h4>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-5 mb-3">
-        <div class="thumb">
-          <div class="image">
-            <a href="img/port/BPFE.JPG">
-              <img src="img/port/BPFE.JPG" class="img-thumbnail">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-5 mb-3">
-        <a href="img/port/BPBE.JPG" class="thumb image">
-          <img src="img/port/BPBE.JPG" class="img-thumbnail">
-        </a>
-      </div>
-      <div class="row text-center"">
-              <div class=" col">
-        <h4>Toko Online Mitra Indo Lebak</h4>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-5 mb-3">
-        <a href="img/port/MILFE.JPG">
-          <img src="img/port/MILFE.JPG" class="img-thumbnail">
-        </a>
-      </div>
-      <div class="col-md-5 mb-3">
-        <a href="img/port/MILBE.JPG">
-          <img src="img/port/MILBE.JPG" class="img-thumbnail">
-        </a>
-      </div>
-    </div>
-    <div class="row text-center"">
-              <div class=" col">
-      <h4>E-libray with Qrcode</h4>
-    </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-5 mb-3">
-        <a href="img/port/PFE.JPG">
-          <img src="img/port/PFE.JPG" class="img-thumbnail">
-        </a>
-      </div>
-      <div class="col-md-5 mb-3">
-        <a href="img/port/PBE.JPG">
-          <img src="img/port/PBE.JPG" class="img-thumbnail">
-        </a>
-      </div>
-    </div>
-    </div>
-  </section>
-
-
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <h3 class="text-center">Contact Me</h3>
-          <hr>
-          <div class="alert alert-success alert-dismissible fade show my-alert d-none" role="alert">
-            <strong>Congratulations!</strong> Your Messages has been sent!
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+        <ul class="nav__menu" id="navMenu">
+          <li><a class="nav__link is-active" href="#about">about</a></li>
+          <li><a class="nav__link" href="#skills">skills</a></li>
+          <li><a class="nav__link" href="#projects">projects</a></li>
+          <li><a class="nav__link" href="#contact">contact</a></li>
+          <li>
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              type="button"
+              aria-label="Ganti tema terang/gelap"
+            >
+              <svg
+                class="theme-toggle__icon theme-toggle__icon--sun"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path
+                  d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+                ></path>
+              </svg>
+              <svg
+                class="theme-toggle__icon theme-toggle__icon--moon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                ></path>
+              </svg>
             </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="hero">
+        <div class="hero__grid" aria-hidden="true"></div>
+        <div class="container hero__inner">
+          <div class="hero__text reveal">
+            <p class="hero__greet"><span class="tok-grn">$</span> whoami</p>
+            <h1 class="hero__name">Irfan Nadhir</h1>
+            <p class="hero__role" id="typedRole">
+              &gt; <span class="tok-blu">Web Programmer</span
+              ><span class="caret" aria-hidden="true">▊</span>
+            </p>
+            <p class="hero__desc">
+              Membangun aplikasi web yang
+              <span class="tok-ylw">fungsional</span> dan
+              <span class="tok-pnk">rapi</span>. Spesialisasi PHP, MySQL, dan
+              JavaScript — dari sistem internal sampai aplikasi publik.
+            </p>
+            <div class="hero__cta">
+              <a
+                class="btn btn--primary"
+                href="file/CV%20IRFAN%20NADHIR.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                download_cv();
+              </a>
+              <a class="btn btn--ghost" href="#projects">view_projects();</a>
+            </div>
+            <div class="hero__social">
+              <a
+                href="https://github.com/irfannadhir"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.3-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.66.41.35.77 1.05.77 2.12v3.14c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/irfan-nadhir-369813163/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://instagram.com/irfannadhir_"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a
+                href="https://wa.me/6285351727056"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.44 4.43-9.87 9.9-9.87a9.83 9.83 0 0 1 9.87 9.89c0 5.44-4.43 9.87-9.89 9.87zm8.4-18.28A11.8 11.8 0 0 0 12.04 0C5.45 0 .1 5.34.1 11.9c0 2.1.55 4.15 1.6 5.95L0 24l6.3-1.65a11.9 11.9 0 0 0 5.74 1.46c6.59 0 11.95-5.35 11.95-11.9 0-3.18-1.24-6.17-3.54-8.4z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCtgi6wWt7Py1kSl87G3ZgFA"
+                target="_blank"
+                rel="noopener"
+                aria-label="YouTube"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
           </div>
-          <form name="submit-to-google-sheet">
-            <div class="form-group">
-              <label for="exampleFormControlInput1">Your Name</label>
-              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name"
-                name="name">
+
+          <div
+            class="terminal reveal"
+            role="img"
+            aria-label="Cuplikan terminal: perkenalan Irfan Nadhir sebagai web programmer"
+          >
+              <div class="terminal__bar">
+                <span
+                  class="terminal__dot terminal__dot--red"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="terminal__dot terminal__dot--yellow"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="terminal__dot terminal__dot--green"
+                  aria-hidden="true"
+                ></span>
+                <span class="terminal__title">irfan@portfolio: ~</span>
+              </div>
+              <div class="terminal__body">
+                <p class="terminal__line">
+                  <span class="tok-grn">$</span> whoami
+                </p>
+                <p class="terminal__out">irfan.nadhir — web_programmer@portfolio</p>
+                <p class="terminal__line">
+                  <span class="tok-grn">$</span> cat
+                  <span class="tok-ylw">stack.txt</span>
+                </p>
+                <p class="terminal__out">
+                  go, react, nextjs, nestjs, typescript, php, mysql, git
+                </p>
+                <p class="terminal__line">
+                  <span class="tok-grn">$</span> ls
+                  <span class="tok-blu">./projects</span>
+                </p>
+                <p class="terminal__out">
+                  <span class="tok-pnk">booking-photographer/</span>
+                  <span class="tok-pnk">toko-online-mitra/</span>
+                  <span class="tok-pnk">e-library-qrcode/</span>
+                </p>
+                <p class="terminal__line" id="typeLine">
+                  <span class="tok-grn">$</span> <span id="typeTarget"></span
+                  ><span class="caret" aria-hidden="true">▊</span>
+                </p>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="exampleFormControlInput1">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
-                name="email">
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Messages</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="messages"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-kirim">Send Me</button>
-            <button class="btn btn-primary d-none btn-loading" type="button" disabled>
-              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-              Loading...
-            </button>
-          </form>
+        </div>
+      </section>
+
+      <!-- ============ MARQUEE ============ -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Go</span><span>React</span><span>Next.js</span
+          ><span>NestJS</span><span>TypeScript</span><span>JavaScript</span
+          ><span>PHP</span><span>MySQL</span><span>HTML5</span><span>CSS3</span
+          ><span>Git</span><span>REST API</span> <span>Go</span
+          ><span>React</span><span>Next.js</span><span>NestJS</span
+          ><span>TypeScript</span><span>JavaScript</span><span>PHP</span
+          ><span>MySQL</span><span>HTML5</span><span>CSS3</span><span>Git</span
+          ><span>REST API</span>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- end contact -->
-  <!-- footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h6>Address:</h6>
-          <p>Cikupa, Kab. Tangerang</p>
-        </div>
 
-        <div class="col-md-4">
-          <h6>Email:</h6>
-          <p>Irfannadhir1@gmail.com</p>
-        </div>
+      <!-- ============ ABOUT ============ -->
+      <section class="section" id="about">
+        <div class="container">
+          <h2 class="section__title reveal">
+            <span class="tok-grn">##</span> about<span class="tok-pnk"
+              >.txt</span
+            >
+          </h2>
 
-        <div class="col-md-4">
-          <h6>Social Media:</h6>
-          <a href="https://wa.me/6285351727056" target="_blank"><i class="fab fa-whatsapp"></i> </a>
-          <a href="https://www.youtube.com/channel/UCtgi6wWt7Py1kSl87G3ZgFA" target="_blank"><i
-              class="fab fa-youtube"></i></a>
+          <div class="about__grid">
+<div class="about__photo reveal">
+            <div class="photo-stage">
+              <div class="photo-glow" aria-hidden="true"></div>
+              <div class="photo-ring" aria-hidden="true"></div>
+              <img
+                src="img/profilnew.png"
+                alt="Foto Irfan Nadhir"
+                width="360"
+                height="480"
+                loading="lazy"
+              />
+              <span class="photo-tag"
+                ><span class="tok-grn">➜</span> irfan@portfolio
+                <span class="tok-blu">~/avatar.png</span></span
+              >
+            </div>
+          </div>
+
+            <div class="about__text reveal">
+              <p>
+                <span class="tok-grn">$</span> cat
+                <span class="tok-ylw">about.txt</span>
+              </p>
+              <p>
+                Lulusan <strong>Sistem Informasi</strong> (2020) yang bekerja
+                sebagai <strong>web programmer</strong>. Punya pengalaman
+                sebagai staf administrasi sekaligus pengelola
+                <span class="tok-blu">website PHP</span> dan database
+                <span class="tok-blu">MySQL</span>.
+              </p>
+              <p>
+                Selama ini saya membangun berbagai sistem berbasis web — mulai
+                dari
+                <span class="tok-pnk">GPS tracking</span>,
+                <span class="tok-pnk">e-library</span> dengan QR code, sampai
+                aplikasi <span class="tok-pnk">admin &amp; absensi</span>.
+              </p>
+              <p class="about__quote">
+                <span class="tok-ylw">//</span> "Kode yang baik adalah kode yang
+                mudah dibaca oleh orang lain enam bulan kemudian."
+              </p>
+              <div class="hero__cta">
+                <a
+                  class="btn btn--primary"
+                  href="file/CV%20IRFAN%20NADHIR.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  download_cv();
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section class="section section--alt" id="skills">
+        <div class="container">
+          <h2 class="section__title reveal">
+            <span class="tok-grn">##</span> skills<span class="tok-pnk"
+              >.json</span
+            >
+          </h2>
+
+          <div class="skills__grid">
+            <div class="skill reveal">
+              <span class="skill__icon" aria-hidden="true">Go</span>
+              <h3>Go</h3>
+              <p>Backend &amp; concurrency</p>
+            </div>
+            <div class="skill reveal">
+              <span class="skill__icon" aria-hidden="true">Re</span>
+              <h3>React</h3>
+              <p>UI komponen modern</p>
+            </div>
+            <div class="skill reveal">
+              <span class="skill__icon" aria-hidden="true">Nx</span>
+              <h3>Next.js</h3>
+              <p>React framework SSR/SSG</p>
+            </div>
+            <div class="skill reveal">
+              <span class="skill__icon" aria-hidden="true">Ne</span>
+              <h3>NestJS</h3>
+              <p>Node.js backend terstruktur</p>
+            </div>
+            <div class="skill reveal">
+              <span class="skill__icon" aria-hidden="true">TS</span>
+              <h3>JavaScript / TypeScript</h3>
+              <p>Web &amp; type safety</p>
+            </div>
+            <div class="skill reveal">
+              <span class="skill__icon" aria-hidden="true">PHP</span>
+              <h3>PHP</h3>
+              <p>Backend &amp; manajemen web</p>
+            </div>
+            <div class="skill reveal">
+              <span class="skill__icon" aria-hidden="true">DB</span>
+              <h3>MySQL</h3>
+              <p>Desain &amp; query database</p>
+            </div>
+            <div class="skill reveal">
+              <span class="skill__icon" aria-hidden="true">&lt;/&gt;</span>
+              <h3>HTML5 / CSS3</h3>
+              <p>Markup &amp; styling responsif</p>
+            </div>
+            <div class="skill reveal">
+              <span class="skill__icon" aria-hidden="true">Git</span>
+              <h3>Git</h3>
+              <p>Version control &amp; GitHub</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section class="section" id="projects">
+        <div class="container">
+          <h2 class="section__title reveal">
+            <span class="tok-grn">##</span> projects<span class="tok-pnk"
+              >.md</span
+            >
+          </h2>
+
+          <div class="projects__grid">
+            <article class="project reveal">
+              <a
+                class="project__thumb"
+                href="img/port/BPFE.JPG"
+                target="_blank"
+                rel="noopener"
+                aria-label="Lihat screenshot Booking Photographer"
+              >
+                <img
+                  src="img/port/BPFE.JPG"
+                  alt="Screenshot Booking Photographer"
+                  loading="lazy"
+                />
+              </a>
+              <div class="project__body">
+                <div class="project__head">
+                  <h3>Booking Photographer</h3>
+                  <a
+                    href="img/port/BPFE.JPG"
+                    target="_blank"
+                    rel="noopener"
+                    class="project__link"
+                    aria-label="Buka screenshot"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+                <p>
+                  Sistem booking/pemesanan fotografer berbasis web dengan
+                  manajemen jadwal dan pemesanan.
+                </p>
+                <ul class="project__tags">
+                  <li>PHP</li>
+                  <li>MySQL</li>
+                  <li>Bootstrap</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <a
+                class="project__thumb"
+                href="img/port/MILFE.JPG"
+                target="_blank"
+                rel="noopener"
+                aria-label="Lihat screenshot Toko Online Mitra Indo Lebak"
+              >
+                <img
+                  src="img/port/MILFE.JPG"
+                  alt="Screenshot Toko Online Mitra Indo Lebak"
+                  loading="lazy"
+                />
+              </a>
+              <div class="project__body">
+                <div class="project__head">
+                  <h3>Toko Online Mitra Indo Lebak</h3>
+                  <a
+                    href="img/port/MILFE.JPG"
+                    target="_blank"
+                    rel="noopener"
+                    class="project__link"
+                    aria-label="Buka screenshot"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+                <p>
+                  Toko online dengan katalog produk, keranjang belanja, dan
+                  manajemen stok.
+                </p>
+                <ul class="project__tags">
+                  <li>PHP</li>
+                  <li>MySQL</li>
+                  <li>Bootstrap</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <a
+                class="project__thumb"
+                href="img/port/PFE.JPG"
+                target="_blank"
+                rel="noopener"
+                aria-label="Lihat screenshot E-library dengan QR Code"
+              >
+                <img
+                  src="img/port/PFE.JPG"
+                  alt="Screenshot E-library dengan QR Code"
+                  loading="lazy"
+                />
+              </a>
+              <div class="project__body">
+                <div class="project__head">
+                  <h3>E-library with QR Code</h3>
+                  <a
+                    href="img/port/PFE.JPG"
+                    target="_blank"
+                    rel="noopener"
+                    class="project__link"
+                    aria-label="Buka screenshot"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+                <p>
+                  Perpustakaan digital dengan katalog buku, peminjaman, dan QR
+                  code untuk akses cepat.
+                </p>
+                <ul class="project__tags">
+                  <li>PHP</li>
+                  <li>MySQL</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="section section--alt" id="contact">
+        <div class="container">
+          <h2 class="section__title reveal">
+            <span class="tok-grn">##</span> contact<span class="tok-pnk"
+              >.sh</span
+            >
+          </h2>
+
+          <div class="contact__grid">
+            <div class="contact__info reveal">
+              <p class="contact__lead">
+                <span class="tok-grn">$</span>
+                <span class="tok-blu">find</span> . -name
+                <span class="tok-ylw">"kerja-sama"</span>
+              </p>
+              <p>
+                Punya proyek, pertanyaan, atau tawaran kerja? Jangan ragu untuk
+                menghubungi saya.
+              </p>
+
+              <ul class="contact__list">
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    ></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <a href="mailto:Irfannadhir1@gmail.com"
+                    >Irfannadhir1@gmail.com</a
+                  >
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                    ></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Cikupa, Kab. Tangerang, Indonesia</span>
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+                    ></path>
+                  </svg>
+                  <a
+                    href="https://wa.me/6285351727056"
+                    target="_blank"
+                    rel="noopener"
+                    >+62 853-5172-7056</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <form class="form reveal" id="contactForm" novalidate>
+              <p
+                class="form__status form__status--success d-none"
+                id="formSuccess"
+                role="status"
+              >
+                ✓ Pesan berhasil dikirim. Terima kasih!
+              </p>
+              <p
+                class="form__status form__status--error d-none"
+                id="formError"
+                role="alert"
+              >
+                ✕ Gagal mengirim pesan. Silakan coba lagi atau hubungi lewat
+                email.
+              </p>
+
+              <div class="form__field">
+                <label for="name">$ name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Nama kamu"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="form__field">
+                <label for="email">$ email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="nama@email.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="form__field">
+                <label for="messages">$ message</label>
+                <textarea
+                  id="messages"
+                  name="messages"
+                  rows="5"
+                  placeholder="Tulis pesanmu di sini..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                class="btn btn--primary btn--block"
+                type="submit"
+                id="formSubmit"
+              >
+                <span class="form__submit-label">kirim_pesan();</span>
+                <span class="form__submit-loading" aria-hidden="true"
+                  >mengirim<span class="dots"
+                    ><span>.</span><span>.</span><span>.</span></span
+                  ></span
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__line">
+          <span class="tok-grn">$</span> echo
+          <span class="tok-ylw"
+            >"© <span id="year"></span> — dibuat dengan HTML, CSS &amp;
+            JavaScript"</span
+          >
+        </p>
+        <p class="footer__line">
+          © <span id="year2"></span> Irfan Nadhir. Semua hak dilindungi.
+        </p>
+        <div class="footer__social">
+          <a
+            href="https://github.com/irfannadhir"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/irfan-nadhir-369813163/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            >LinkedIn</a
+          >
+          <a
+            href="https://instagram.com/irfannadhir_"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+            >Instagram</a
+          >
+          <a
+            href="https://wa.me/6285351727056"
+            target="_blank"
+            rel="noopener"
+            aria-label="WhatsApp"
+            >WhatsApp</a
+          >
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-
-
-
-  <!-- Optional JavaScript; choose one of the two! -->
-
-  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-  </script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script>
-    const scriptURL =
-      'https://script.google.com/macros/s/AKfycby74-svO1z-XlbPbSeAEIWnep-Rhdp8B6BiUyf0rvjNDE1cDay0iXvtLAIdRXi-ExFa5w/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const btnKirim = document.querySelector('.btn-kirim');
-    const btnLoading = document.querySelector('.btn-loading');
-    const MyAlert = document.querySelector('.my-alert');
-
-
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      btnLoading.classList.toggle('d-none');
-      btnKirim.classList.toggle('d-none');
-
-      fetch(scriptURL, {
-          method: 'POST',
-          body: new FormData(form)
-        })
-        .then(response => {
-          btnLoading.classList.toggle('d-none');
-          btnKirim.classList.toggle('d-none');
-          MyAlert.classList.toggle('d-none');
-          // rest form
-          form.reset();
-          console.log('Success!', response);
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-</body>
-
+    <script src="js/main.js"></script>
+  </body>
 </html>
