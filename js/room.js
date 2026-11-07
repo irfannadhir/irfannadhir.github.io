@@ -93,7 +93,7 @@ const SCRIPT = [
   { out: "go · react · nextjs · nestjs · typescript", color: "#fbbf24" },
   { out: "php · mysql · postgresql · git", color: "#fbbf24" },
   { cmd: "cat lokasi.txt" },
-  { out: "Cikupa, Kab. Tangerang, Indonesia" },
+  { out: "Kab. Tangerang, Indonesia" },
   { cmd: "./contact --email" },
   { out: "irfannadhir1@gmail.com", color: "#f472b6" },
 ];
@@ -355,7 +355,7 @@ function init() {
 
   /* ----- Orang yang duduk di kursi (klik → kartu profil) ----- */
   const CHAIR_YAW = chair.rotation.y;
-  const skinMat = mat(0xc68642, { roughness: 0.7 });
+  const skinMat = mat(0xf3cfa6, { roughness: 0.7, emissive: 0x7a5236, emissiveIntensity: 0.2 });
   const shirtMat = mat(0x16a34a, { roughness: 0.85 });
   const pantsMat = mat(0x1e293b, { roughness: 0.9 });
   const hairMat = mat(0x1c1917, { roughness: 1 });
