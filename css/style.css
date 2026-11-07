@@ -505,6 +505,187 @@ ul {
   padding-left: 1ch;
 }
 
+/* ---------- Ruangan 3D (js/room.js) ---------- */
+.hero__visual {
+  position: relative;
+  min-width: 0;
+}
+
+.room {
+  display: none;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.95;
+}
+
+.hero__visual.has-3d .room {
+  display: block;
+}
+
+.hero__visual.has-3d .terminal {
+  display: none;
+}
+
+.room canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.room__hint {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  transition: opacity var(--transition);
+}
+
+.room.is-focused .room__hint {
+  opacity: 0;
+}
+
+.room__tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.room__tip.is-visible {
+  opacity: 1;
+}
+
+.room__exit {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition), visibility var(--transition),
+    border-color var(--transition);
+}
+
+.room__exit:hover {
+  border-color: var(--accent);
+}
+
+.room__card {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: min(58%, 300px);
+  max-height: calc(100% - 16px);
+  overflow-y: auto;
+  padding: 16px;
+  font-size: 0.82rem;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.room.is-person .room__card {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0.35s;
+}
+
+.room__card-cmd {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.room__card-title {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.room__card-lead {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.room__card-list dt {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+}
+
+.room__card-list dt::before {
+  content: "# ";
+  color: var(--text-muted);
+}
+
+.room__card-list dd {
+  margin: 0 0 10px;
+}
+
+.room__card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.room__card-tags span {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--tok-blu);
+  border: 1px solid color-mix(in srgb, var(--tok-blu) 40%, transparent);
+  padding: 1px 8px;
+  border-radius: 999px;
+}
+
+.room__card-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.room__card-cta .btn {
+  padding: 6px 12px;
+  font-size: 0.75rem;
+}
+
+.room.is-focused .room__exit {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* ---------- About ---------- */
 .about__grid {
   display: grid;
@@ -660,106 +841,6 @@ ul {
 .skill p {
   font-size: 0.88rem;
   color: var(--text-muted);
-}
-
-/* ---------- Projects ---------- */
-.projects__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.project {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--surface);
-  display: flex;
-  flex-direction: column;
-  transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.2s ease,
-    box-shadow 0.2s ease;
-  transform-style: preserve-3d;
-  will-change: transform;
-}
-
-.project.reveal.is-visible:hover {
-  border-color: var(--accent);
-  transform: perspective(900px) translateY(-6px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
-  box-shadow: 0 12px 32px color-mix(in srgb, var(--accent) 12%, transparent);
-}
-
-.project__thumb {
-  display: block;
-  border-bottom: 1px solid var(--border);
-  overflow: hidden;
-}
-
-.project__thumb img {
-  width: 100%;
-  aspect-ratio: 16 / 7.5;
-  object-fit: cover;
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.project:hover .project__thumb img {
-  transform: scale(1.04);
-  filter: brightness(1.08);
-}
-
-.project__body {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  flex: 1;
-}
-
-.project__head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.project__head h3 {
-  font-family: var(--font-mono);
-  font-size: 1rem;
-}
-
-.project__link {
-  display: inline-flex;
-  padding: 6px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  color: var(--text-muted);
-  transition: color var(--transition), border-color var(--transition), transform var(--transition);
-}
-
-.project__link:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  transform: translate(2px, -2px);
-}
-
-.project__body p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-.project__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: auto;
-}
-
-.project__tags li {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--tok-blu);
-  border: 1px solid color-mix(in srgb, var(--tok-blu) 40%, transparent);
-  padding: 3px 10px;
-  border-radius: 999px;
 }
 
 /* ---------- Marquee ---------- */
@@ -1046,9 +1127,6 @@ ul {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .projects__grid {
-    grid-template-columns: 1fr;
-  }
 
   .nav__burger {
     display: flex;
@@ -1088,6 +1166,15 @@ ul {
 @media (max-width: 560px) {
   .section {
     padding: 64px 0;
+  }
+
+  .room__card {
+    top: auto;
+    bottom: 8px;
+    left: 8px;
+    width: auto;
+    max-height: 60%;
+    transform: translateY(12px);
   }
 
   .skills__grid {

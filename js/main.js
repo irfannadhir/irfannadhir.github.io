@@ -138,7 +138,7 @@
   }
 
   /* ---------- Tilt effect on cards ---------- */
-  const tiltCards = document.querySelectorAll(".skill, .project");
+  const tiltCards = document.querySelectorAll(".skill");
 
   if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
     tiltCards.forEach((card) => {

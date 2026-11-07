@@ -108,7 +108,6 @@
         <ul class="nav__menu" id="navMenu">
           <li><a class="nav__link is-active" href="#about">about</a></li>
           <li><a class="nav__link" href="#skills">skills</a></li>
-          <li><a class="nav__link" href="#projects">projects</a></li>
           <li><a class="nav__link" href="#contact">contact</a></li>
           <li>
             <button
@@ -201,7 +200,7 @@
                 </svg>
                 download_cv();
               </a>
-              <a class="btn btn--ghost" href="#projects">view_projects();</a>
+              <a class="btn btn--ghost" href="#contact">contact_me();</a>
             </div>
             <div class="hero__social">
               <a
@@ -308,53 +307,106 @@
             </div>
           </div>
 
-          <div
-            class="terminal reveal"
-            role="img"
-            aria-label="Cuplikan terminal: perkenalan Irfan Nadhir sebagai web programmer"
-          >
-            <div class="terminal__bar">
-              <span
-                class="terminal__dot terminal__dot--red"
-                aria-hidden="true"
-              ></span>
-              <span
-                class="terminal__dot terminal__dot--yellow"
-                aria-hidden="true"
-              ></span>
-              <span
-                class="terminal__dot terminal__dot--green"
-                aria-hidden="true"
-              ></span>
-              <span class="terminal__title">irfan@portfolio: ~</span>
+          <div class="hero__visual reveal" id="heroVisual">
+            <!-- Ruangan 3D (js/room.js). Kalau WebGL tidak tersedia, terminal di bawah yang tampil. -->
+            <div class="room" id="room">
+              <div class="room__tip" id="roomTip" aria-hidden="true"></div>
+              <button class="room__exit" id="roomExit" type="button">
+                ← keluar
+              </button>
+              <aside class="room__card" aria-label="Profil Irfan Nadhir">
+                <p class="room__card-cmd">
+                  <span class="tok-grn">$</span> cat
+                  <span class="tok-ylw">profil.md</span>
+                </p>
+                <h3 class="room__card-title">👋 Halo, saya Irfan</h3>
+                <p class="room__card-lead">
+                  Web programmer dari Cikupa, Tangerang. Senang membangun
+                  aplikasi web yang fungsional dan rapi.
+                </p>
+                <dl class="room__card-list">
+                  <dt>pendidikan</dt>
+                  <dd>S1 Sistem Informasi (2020)</dd>
+                  <dt>pengalaman</dt>
+                  <dd>
+                    Web programmer &amp; staf administrasi — mengelola website
+                    Next.js/React, aplikasi mobile, serta database PostgreSQL
+                    &amp; MySQL
+                  </dd>
+                  <dt>pernah membangun</dt>
+                  <dd>GPS tracking, e-library dengan QR code, aplikasi admin &amp; absensi</dd>
+                  <dt>stack</dt>
+                  <dd class="room__card-tags">
+                    <span>Go</span><span>React</span><span>Next.js</span
+                    ><span>NestJS</span><span>TypeScript</span><span>PHP</span
+                    ><span>MySQL</span><span>PostgreSQL</span>
+                  </dd>
+                </dl>
+                <div class="room__card-cta">
+                  <a
+                    class="btn btn--primary"
+                    href="file/CV%20IRFAN%20NADHIR.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    >download_cv();</a
+                  >
+                  <a class="btn btn--ghost" href="#contact">contact_me();</a>
+                </div>
+              </aside>
+              <p class="room__hint">
+                <span class="tok-ylw">//</span> klik
+                <span class="tok-ylw">lampu</span> untuk nyala/matikan ruangan,
+                <span class="tok-pnk">orangnya</span> untuk kenalan, atau
+                <span class="tok-grn">komputer</span> untuk membuka terminal
+              </p>
             </div>
-            <div class="terminal__body">
-              <p class="terminal__line">
-                <span class="tok-grn">$</span> whoami
-              </p>
-              <p class="terminal__out">
-                irfan.nadhir — web_programmer@portfolio
-              </p>
-              <p class="terminal__line">
-                <span class="tok-grn">$</span> cat
-                <span class="tok-ylw">stack.txt</span>
-              </p>
-              <p class="terminal__out">
-                go, react, nextjs, nestjs, typescript, php, mysql, git
-              </p>
-              <p class="terminal__line">
-                <span class="tok-grn">$</span> ls
-                <span class="tok-blu">./projects</span>
-              </p>
-              <p class="terminal__out">
-                <span class="tok-pnk">booking-photographer/</span>
-                <span class="tok-pnk">toko-online-mitra/</span>
-                <span class="tok-pnk">e-library-qrcode/</span>
-              </p>
-              <p class="terminal__line" id="typeLine">
-                <span class="tok-grn">$</span> <span id="typeTarget"></span
-                ><span class="caret" aria-hidden="true">▊</span>
-              </p>
+
+            <div
+              class="terminal"
+              role="img"
+              aria-label="Cuplikan terminal: perkenalan Irfan Nadhir sebagai web programmer"
+            >
+              <div class="terminal__bar">
+                <span
+                  class="terminal__dot terminal__dot--red"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="terminal__dot terminal__dot--yellow"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="terminal__dot terminal__dot--green"
+                  aria-hidden="true"
+                ></span>
+                <span class="terminal__title">irfan@portfolio: ~</span>
+              </div>
+              <div class="terminal__body">
+                <p class="terminal__line">
+                  <span class="tok-grn">$</span> whoami
+                </p>
+                <p class="terminal__out">
+                  irfan.nadhir — web_programmer@portfolio
+                </p>
+                <p class="terminal__line">
+                  <span class="tok-grn">$</span> cat
+                  <span class="tok-ylw">stack.txt</span>
+                </p>
+                <p class="terminal__out">
+                  go, react, nextjs, nestjs, typescript, php, mysql, git
+                </p>
+                <p class="terminal__line">
+                  <span class="tok-grn">$</span> cat
+                  <span class="tok-blu">contact.txt</span>
+                </p>
+                <p class="terminal__out">
+                  <span class="tok-pnk">irfannadhir1@gmail.com</span>
+                </p>
+                <p class="terminal__line" id="typeLine">
+                  <span class="tok-grn">$</span> <span id="typeTarget"></span
+                  ><span class="caret" aria-hidden="true">▊</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -513,187 +565,6 @@
               <h3>Git</h3>
               <p>Version control &amp; GitHub</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============ PROJECTS ============ -->
-      <section class="section" id="projects">
-        <div class="container">
-          <h2 class="section__title reveal">
-            <span class="tok-grn">##</span> projects<span class="tok-pnk"
-              >.md</span
-            >
-          </h2>
-
-          <div class="projects__grid">
-            <article class="project reveal">
-              <a
-                class="project__thumb"
-                href="img/port/BPFE.JPG"
-                target="_blank"
-                rel="noopener"
-                aria-label="Lihat screenshot Booking Photographer"
-              >
-                <img
-                  src="img/port/BPFE.JPG"
-                  alt="Screenshot Booking Photographer"
-                  loading="lazy"
-                />
-              </a>
-              <div class="project__body">
-                <div class="project__head">
-                  <h3>Booking Photographer</h3>
-                  <a
-                    href="img/port/BPFE.JPG"
-                    target="_blank"
-                    rel="noopener"
-                    class="project__link"
-                    aria-label="Buka screenshot"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-                <p>
-                  Sistem booking/pemesanan fotografer berbasis web dengan
-                  manajemen jadwal dan pemesanan.
-                </p>
-                <ul class="project__tags">
-                  <li>PHP</li>
-                  <li>MySQL</li>
-                  <li>Bootstrap</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="project reveal">
-              <a
-                class="project__thumb"
-                href="img/port/MILFE.JPG"
-                target="_blank"
-                rel="noopener"
-                aria-label="Lihat screenshot Toko Online Mitra Indo Lebak"
-              >
-                <img
-                  src="img/port/MILFE.JPG"
-                  alt="Screenshot Toko Online Mitra Indo Lebak"
-                  loading="lazy"
-                />
-              </a>
-              <div class="project__body">
-                <div class="project__head">
-                  <h3>Toko Online Mitra Indo Lebak</h3>
-                  <a
-                    href="img/port/MILFE.JPG"
-                    target="_blank"
-                    rel="noopener"
-                    class="project__link"
-                    aria-label="Buka screenshot"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-                <p>
-                  Toko online dengan katalog produk, keranjang belanja, dan
-                  manajemen stok.
-                </p>
-                <ul class="project__tags">
-                  <li>PHP</li>
-                  <li>MySQL</li>
-                  <li>Bootstrap</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="project reveal">
-              <a
-                class="project__thumb"
-                href="img/port/PFE.JPG"
-                target="_blank"
-                rel="noopener"
-                aria-label="Lihat screenshot E-library dengan QR Code"
-              >
-                <img
-                  src="img/port/PFE.JPG"
-                  alt="Screenshot E-library dengan QR Code"
-                  loading="lazy"
-                />
-              </a>
-              <div class="project__body">
-                <div class="project__head">
-                  <h3>E-library with QR Code</h3>
-                  <a
-                    href="img/port/PFE.JPG"
-                    target="_blank"
-                    rel="noopener"
-                    class="project__link"
-                    aria-label="Buka screenshot"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-                <p>
-                  Perpustakaan digital dengan katalog buku, peminjaman, dan QR
-                  code untuk akses cepat.
-                </p>
-                <ul class="project__tags">
-                  <li>PHP</li>
-                  <li>MySQL</li>
-                  <li>JavaScript</li>
-                </ul>
-              </div>
-            </article>
           </div>
         </div>
       </section>
@@ -903,5 +774,14 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="js/room.js"></script>
   </body>
 </html>
